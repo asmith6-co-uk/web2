@@ -158,7 +158,7 @@ function showHome(updateHash = true) {
     history.replaceState(
       null,
       "",
-      `${window.location.origin}${window.location.pathname}#home`
+      `${window.location.origin}${window.QA_ENTRY_PATH || "/demo/"}#home`
     );
   }
 }
@@ -252,7 +252,7 @@ function updateLocationHash() {
   history.replaceState(
     null,
     "",
-    `${window.location.origin}${window.location.pathname}#c${carouselNumber}-s${cardNumber}`
+    `${window.location.origin}${window.QA_ENTRY_PATH || "/demo/"}#c${carouselNumber}-s${cardNumber}`
   );
 }
 

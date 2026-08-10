@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCFC Vault — The Exile Years QA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <div class="eyebrow">CCFC VAULT</div>
+      <h1>The Exile Years — QA</h1>
+    </div>
+    <button id="homeButton" class="nav-button hidden" type="button">
+      Home
+    </button>
+  </header>
+
+  <main>
+
+    <section id="homeView" class="home-view">
+      <div class="intro">
+        <p>Choose a carousel to review.</p>
+      </div>
+
+      <div id="carouselGrid" class="carousel-grid"></div>
+    </section>
+
+
+    <section id="viewerView" class="viewer-view hidden">
+
+      <div class="viewer-toolbar">
+
+        <button id="previousCarouselButton"
+                class="nav-button"
+                type="button">
+          ← Previous carousel
+        </button>
+
+        <div class="viewer-title">
+          <div id="carouselLabel" class="eyebrow"></div>
+          <h2 id="carouselTitle"></h2>
+          <div id="cardCounter" class="card-counter"></div>
+        </div>
+
+        <button id="nextCarouselButton"
+                class="nav-button"
+                type="button">
+          Next carousel →
+        </button>
+
+      </div>
+
+
+      <div class="card-stage">
+
+        <button id="previousCardButton"
+                class="card-arrow card-arrow-left"
+                type="button"
+                aria-label="Previous card">
+          ‹
+        </button>
+
+        <button id="imageButton"
+                class="image-button"
+                type="button"
+                aria-label="Zoom image">
+          <img id="cardImage"
+               class="card-image"
+               src=""
+               alt="">
+        </button>
+
+        <button id="nextCardButton"
+                class="card-arrow card-arrow-right"
+                type="button"
+                aria-label="Next card">
+          ›
+        </button>
+
+      </div>
+
+
+      <div class="viewer-footer">
+
+        <div id="cardFilename" class="filename"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <div id="zoomModal"
+       class="modal hidden"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Zoomed card">
+
+    <button id="closeZoomButton"
+            class="modal-close"
+            type="button"
+            aria-label="Close zoom">
+      ×
+    </button>
+
+    <div class="zoom-shell">
+      <img id="zoomImage"
+           class="zoom-image"
+           src=""
+           alt="">
+    </div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>

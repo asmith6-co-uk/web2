@@ -155,7 +155,11 @@ function showHome(updateHash = true) {
   document.title = "CCFC Vault — The Exile Years QA";
 
   if (updateHash) {
-    history.replaceState(null, "", "#home");
+    history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}#home`
+    );
   }
 }
 
@@ -248,7 +252,7 @@ function updateLocationHash() {
   history.replaceState(
     null,
     "",
-    `#c${carouselNumber}-s${cardNumber}`
+    `${window.location.pathname}#c${carouselNumber}-s${cardNumber}`
   );
 }
 
